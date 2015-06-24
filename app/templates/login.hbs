@@ -1,0 +1,16 @@
+<h1 class="text-center jumbotron">Welcome to Groovy Movies!</h1>
+<div class="panel panel-default">
+  <!-- <div class="panel-body text-center">
+    <button {{action "login"}} class="btn"name="login">Login</button>
+  </div> -->
+  <!-- <div class="panel-body text-center">
+    {{#link-to 'new-user'}}<button class="btn"name="create-user">Create User</button>{{/link-to}}
+  </div> -->
+  <div class="panel-body text-center">
+    <form>
+      {{input valueBinding='user-name' class='form-control' id='user-name' placeholder='User Name'}}
+      {{input valueBinding='password' class='form-control' id='password' placeholder='password'}}
+      <button {{action "login"}} class="btn"name="login">Login</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<h1 class="text-center jumbotron">Welcome to Groovy Movies!</h1>
+<div class="panel panel-default">
+  <div class="panel-body text-center">
+    <button {{action "login"}} class="btn"name="login">Login</button>
+  </div>
+  <div class="panel-body text-center">
+    {{#link-to 'new-user'}}<button class="btn"name="create-user">Create User</button>{{/link-to}}
+  </div>
+  <div class="panel-body text-center">
+    <form>
+      {{#each model as |user|}}
+      {{view Ember.Select
+      content=user
+      optionValuePath='user'
+      optionLabelPath='user.userName'
+      selectionBinding=user
+      }}
+
+      {{/each}}
+
+    </form>
+  </div>
+</div>

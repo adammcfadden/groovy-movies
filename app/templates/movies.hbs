@@ -1,0 +1,37 @@
+<div class="container">
+  <h1>Movies!</h1>
+  <div class="row">
+    {{#each model.movieModel as |movie|}}
+      <div class="item" {{action 'addMovieToLoggedUser' movie addingMovies}}>
+        <div class="panel panel-default" >
+          <div class="panel-heading text-center">
+            <h5>{{movie.title}}</h5>
+          </div>
+          <div class="panel-body">
+            <img {{bind-attr src=movie.image}} />
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+
+  <button id="open-add-movies" {{action 'openAddMovies'}}>Add Movies to a User</button>
+  <button id="done-selecting" {{action 'doneSelecting'}}>Done Selecting Movies</button>
+
+  <div id="movie-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">{{currentMovie.title}}</h4>
+        </div>
+        <div class="modal-body">
+          <p>{{currentMovie.description}}</p>
+        </div>
+        <div class="modal-footer">
+          <span {{action 'deleteMovie' currentMovie}} class="btn btn-danger">Delete Movie</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

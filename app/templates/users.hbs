@@ -1,0 +1,15 @@
+<div class="container">
+  {{#each model as |user|}}
+    <li>
+      {{#link-to 'user' user.id}}
+        {{user.userName}}
+      {{/link-to}}
+    </li>
+  {{/each}}
+  {{#link-to 'new-user'}}New User{{/link-to}}
+</div>
+
+
+<div class="container">
+  {{outlet}}
+</div>

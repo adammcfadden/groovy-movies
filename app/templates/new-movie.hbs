@@ -1,0 +1,11 @@
+<div class="form-group">
+  <form>
+    {{input valueBinding='title' class='form-control' id='title' placeholder='Movie title'}}
+    <br>
+    {{textarea valueBinding='description' class='form-control' rows='3' id='description' placeholder='Description'}}
+    {{input id="release-date" class="form-control" type="date" valueBinding="release-date" placeholder="Release Date"}}
+    {{input valueBinding='image' class='form-control' id='image' placeholder='Movie image'}}
+
+    <button class="btn btn-success" {{action 'save'}}>Add Movie</button>
+  </form>
+</div>

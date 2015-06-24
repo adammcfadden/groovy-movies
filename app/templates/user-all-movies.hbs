@@ -1,0 +1,8 @@
+<div class="container">
+  <h1>Movies!</h1>
+  {{#link-to 'new-movie'}}Add a Movie{{/link-to}}
+  {{#each model as |movie|}}
+    <li>{{movie.title}}<br>
+    {{movie.description}}</li>
+  {{/each}}
+</div>

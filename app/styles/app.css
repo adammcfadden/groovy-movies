@@ -1,0 +1,45 @@
+body {
+  margin-top: 50px;
+  background: #9591FF;
+}
+#user-select, #current-user, #reselect-user, #done-selecting, .select-this-movie{
+  display: none;
+}
+
+#select-this-movie {
+  background-color: #641A99;
+}
+
+*, *:before, *:after {box-sizing:  border-box !important;}
+
+
+.row {
+ -moz-column-width: 12em;
+ -webkit-column-width: 12em;
+ -moz-column-gap: 0em;
+ -webkit-column-gap:0em;
+}
+
+
+.item {
+ display: inline-block;
+ padding:  .25rem;
+ width:  100%;
+}
+
+.item:hover {
+  opacity: 0.5;
+}
+
+.select-this-movie:hover {
+  color: yellow;
+}
+
+.well {
+ position:relative;
+ display: block;
+}
+
+img{
+  max-width: 100%;
+}
