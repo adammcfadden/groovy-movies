@@ -9,16 +9,7 @@ To follow along and build your own version of this app go to <a href="https://ww
 
 ```
 git clone https://github.com/adammcfadden/groovy-movies.git
-bundle
-rake db:create
-rake db:migrate
-rails s
-```
-
-If testing also run: 
-
-```
-rake db:test:prepare
+ember s
 ```
 
 ###Author
